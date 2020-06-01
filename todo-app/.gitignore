@@ -1,5 +1,7 @@
 .DS_Store
 node_modules
+package-lock.json
+bable.config.js
 /dist
 
 # local env files
