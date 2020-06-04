@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <div class="container">
+      <AddTodos />
+      <FilterTodos />
        <Todos />
     </div>
   </div>
@@ -8,16 +10,18 @@
 
 <script>
 import Todos from './components/Todos.vue'
+import AddTodos from "./components/addTodos";
+import FilterTodos from "./components/FilterTodos.vue";
 
 export default {
   name: 'App',
   components: {
-    Todos
+    Todos, AddTodos, FilterTodos
   }
 }
 </script>
 
-<style>
+<style scoped>
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 1.6;
