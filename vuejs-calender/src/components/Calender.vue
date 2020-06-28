@@ -106,6 +106,7 @@
 
 
 <script>
+import {db} from '../main';
   export default {
     name: 'Calender',
 
@@ -128,9 +129,22 @@
     selectedEvent: {},
     selectedElement: null,
     selectedOpen: false,
-    eventsMap: [],
+    events: [],
     dialog: false,
     dialogDate: false
     }),
+    mounted(){
+      this.getEvents();
+    },
+   methods:{
+     async getEvents(){
+       let snapshot = await db.collection('events').doc('alovelace');
+      //  let events = [];
+      console.log(snapshot);
+      //  snapshot.forEach(doc=>{
+        //  console.log(doc);
+      //  })
+     }
+   } 
   }
 </script>
